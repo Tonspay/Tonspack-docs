@@ -5,6 +5,7 @@
 ## Developer
 
 * [Get start](developer/get-start.md)
+* [SDK Rules](developer/sdk-rules.md)
 
 ## Links
 
