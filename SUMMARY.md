@@ -1,6 +1,7 @@
 # Table of contents
 
 * [😇 Welcome](README.md)
+* [⛓️ Chains support](chains-support.md)
 * [👻 How it works ?](how-it-works.md)
 
 ## Developer

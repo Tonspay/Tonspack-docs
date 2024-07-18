@@ -28,23 +28,7 @@ And provide sdk/toolkit to help telegram webapp/minigame developer to join web3 
   * Auto callup Tonspack-webapp confirm
   * Return transaction status/hash
 
-## Chains support&#x20;
 
-* #### Now working chains
-  * Solana
-  * Arb
-  * Bsc
-  * TON
-* #### Now developing chains&#x20;
-  * Aptos
-  * TRON
-  * XRP
-  * ZetaChain
-  * Mina
-  * CROSSVALUE
-  * ZKsync
-  * NEAR
-  * Nibiru
 
 ## Base screenshot&#x20;
 
