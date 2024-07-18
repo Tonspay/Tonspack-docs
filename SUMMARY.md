@@ -14,3 +14,6 @@
 
 * [Tonspack-webapp-wallet](https://t.me/tonspack\_bot/app)
 * [Tonspack-bot](https://t.me/tonspack\_bot)
+* [Demo-raydiumV3](https://t.me/Tonspack\_bot/gate?startapp=25K6n8x9BaUPfne6zFhSW9B5S9ZerNX5aeytN78)
+* [Demo-raydium](https://t.me/Tonspack\_bot/gate?startapp=j2mVGtSaxUkvnn89BzwPTkRVkUuSUXGdDG)
+* [Demo-solana-tools](https://t.me/Tonspack\_bot/gate?startapp=5k2tWE6P7gju7xaFZ7nRdmHLE7dQAsiJtXpRk6Na)

@@ -23,3 +23,6 @@ Tonspack wallet support for more than 20+ major chains , including **EVM/SOL/TON
   * ZKsync
   * NEAR
   * Nibiru
+  * Dchain
+  * Bitcoin
+  * Ligting
