@@ -10,7 +10,7 @@ Currently Tonspack using HD-wallet \[[BIP-44](https://github.com/bitcoin/bips/bl
 
 Now Tonspack also working on add wallet into **TonconnectUI / Walletconnect /wallet-adapter-react** . To make Tonspack into one of the major wallet .
 
-## How tonspack work
+## How Tonspack work
 
 Tonspack is working on build a mulity chains wallet by telegram webapp to allows users on mobile to connect easily .
 
@@ -24,7 +24,7 @@ And provide sdk/toolkit to help telegram webapp/minigame developer to join web3 
 * Sign message
   * Auto callup Tonspack-webapp confirm
   * Return signed message and raw message and wallet address
-* Sign and send tr
+* Sign and send transaction
   * Auto callup Tonspack-webapp confirm
   * Return transaction status/hash
 
