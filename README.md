@@ -34,24 +34,12 @@ And provide sdk/toolkit to help telegram webapp/minigame developer to join web3 
 
 ## Base screenshot&#x20;
 
-<div>
+<figure><img src=".gitbook/assets/屏幕快照 2024-08-01 下午4.14.17.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/1.jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/屏幕快照 2024-08-01 下午4.14.23 (2).png" alt=""><figcaption></figcaption></figure>
 
- 
+<figure><img src=".gitbook/assets/屏幕快照 2024-08-01 下午4.14.32.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/2.jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/屏幕快照 2024-08-01 下午4.14.39.png" alt=""><figcaption></figcaption></figure>
 
-</div>
-
-
-
-<div>
-
-<figure><img src=".gitbook/assets/4 (1).jpeg" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/5411721210086_.pic (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/屏幕快照 2024-08-01 下午4.16.21.png" alt=""><figcaption></figcaption></figure>
