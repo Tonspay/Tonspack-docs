@@ -9,9 +9,17 @@ Tonspack wallet support for more than 20+ major chains , including **EVM/SOL/TON
 ## Chains support&#x20;
 
 * #### Now working chains
+  * Bitcoin
   * Solana
-  * Arb
+  * Arbitrum
   * Bsc
+  * Ethereum
+  * Base
+  * Avalance
+  * Polygon
+  * Op mainnet
+  * CROSSVALUE
+  * Dchain
   * TON
 * #### Now developing chains&#x20;
   * Aptos
@@ -19,10 +27,7 @@ Tonspack wallet support for more than 20+ major chains , including **EVM/SOL/TON
   * XRP
   * ZetaChain
   * Mina
-  * CROSSVALUE
   * ZKsync
   * NEAR
   * Nibiru
-  * Dchain
-  * Bitcoin
   * Ligting
