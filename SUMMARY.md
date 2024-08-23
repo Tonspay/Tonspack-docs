@@ -7,6 +7,7 @@
 ## Developer
 
 * [Get start](developer/get-start.md)
+* [MPC part](developer/mpc-part.md)
 * [SDK Rules](developer/sdk-rules.md)
 * [Http interface (centralized)](developer/http-interface-centralized.md)
 
