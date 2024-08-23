@@ -10,63 +10,49 @@ Auth user base on `telegram-webapp-initdata` and `telegram-BiometricManager` .
 
 ## How Tonspack work ?&#x20;
 
-There are 2 cores of Tonspack wallet . Works like `@wallet` and `@Tonspace`
+The core of Tonspack wallet is Web3auth base telegram webapp initData MPC . Details of MPC part can be found [here](developer/mpc-part.md) .
 
-1. Centralized Tonspack wallet
-2. Decentralized Spacepack wallet&#x20;
+### Tonspack working flow&#x20;
 
-### How Centralized Tonspack wallet works ?&#x20;
+* Login telegram webapp
+* Auth telegram webapp initData into [Tonspack-mpc-auth-middleware ](https://github.com/Tonspay/Tonspack-Web3auth-Telegram-Webapp-MPC-Middleware). Generate JWT token.
+* Redirect JWT token into Tonspack wallet font-end .&#x20;
+* Tonspack wallet font-end request Web3auth for it's privateKey part .  And culcuate the privateKey in local font-end .
+* Using BIP-44 to generate the different keypair for chains in local font-end .
+* Do follow connect/sign message/send transaction in font-end .&#x20;
 
-The centralized part Tonspack wallet , work base on restful-api .&#x20;
-
-Every user login via [Tonspack-telegram-miniapp](https://t.me/tonspack\_bot/app) . Will auto auth base on `telegram-webapp-initdata` , and access to keypair generate base on `BIP44`  using user's telegramID.
+### How Tonspack using Bip-44 works ?&#x20;
 
 #### Example code how it works base on BIP44
 
 ```javascript
-function getKp(uid)
+function getKp(sk:string)
 {
-    var row = Math.ceil(uid/process.env.WLLET_HD_MAX)
-    var subRow = Math.ceil(uid%process.env.WLLET_HD_MAX)
-    var kp = nacl.sign.keyPair.fromSecretKey(
-        b58.decode(process.env.WLLET_SK)
-    )
-    const master = hd.hdkey.fromMasterSeed(kp.publicKey);
-    const subKp = nacl.sign.keyPair.fromSeed(
-        (
-            (
-                master.deriveChild(row)
-            ).getWallet()
-        ).getPrivateKey()
-    );
-    const subMaster = hd.hdkey.fromMasterSeed(subKp.publicKey);
-    var evm = subMaster.deriveChild(subRow)
-    var evmWallet = evm.getWallet()
-    var evmKp = {
-        address : evmWallet.getAddressString(),
-        privateKey : evmWallet.getPrivateKeyString()
-    }
-    var naclKp = nacl.sign.keyPair.fromSeed(evmWallet.getPrivateKey())
-    var solKp = {
-        address : b58.encode(naclKp.publicKey),
-        privateKey :b58.encode(naclKp.secretKey),
-    }
-    var tonKp = ton.getTonWalletV4KeyPair(naclKp.secretKey,0)
+    const master = hd.hdkey.fromMasterSeed(Buffer.from(sk,'hex'));
+    const derive = master.deriveChild(derivePath)
+    const evmWallet = derive.getWallet()
+    const naclKp = nacl.sign.keyPair.fromSeed(evmWallet.getPrivateKey())
+    
     return {
         naclKp : naclKp,
-        evmKp : evmKp,
-        solKp : solKp,
-        tonKp : tonKp
-    }
-}
+        evmKp :  {
+            address : evmWallet.getAddressString(),
+            privateKey : evmWallet.getPrivateKeyString()
+        },
+        solKp : {
+            address : bs58.encode(naclKp.publicKey),
+            privateKey :bs58.encode(naclKp.secretKey),
+        },
+        tonKp : ton.getTonWalletV4KeyPair(
+            Buffer.from(naclKp.secretKey),0),
+        btcKp : btc.getKeyPair(
+            Buffer.from(evmWallet.getPrivateKey())
+        )
+
+    } as objKP
 ```
 
-All the keypair of users can be locate base on it's telegramID . And generate by `BIP44`
+The init sk comes from Web3auth SDK generate .&#x20;
 
-### How decentralized Spacepack wallet work ?
+And it can generate different keypair by BIP-44 rules .&#x20;
 
-The Spacepack is a MPC wallet base on `telegram-webapp-initdata` and `telegram-BiometricManager` .
-
-Currently the MPC solution provider is [litprotocol](https://www.litprotocol.com/) .
-
-And the Spacepack wallet is currently building .&#x20;
