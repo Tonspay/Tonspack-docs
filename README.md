@@ -6,7 +6,9 @@ description: Telegram base mobile multichains wallet for all your crypto
 
 Tonspack is a multichains wallet base on Telegram webapp & bot , allows anyone to use telegram base crypto in most of the major chains .&#x20;
 
-Currently Tonspack using [Web3auth MPC](https://github.com/Tonspay/Tonspack-Web3auth-Telegram-Webapp-MPC-Middleware) and HD-wallet \[[BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)] to generate unique keypair for telegram users .  It is now a fully **decentaliurzed** MPC wallet .
+Tonspack used to use [Web3auth MPC](https://github.com/Tonspay/Tonspack-Web3auth-Telegram-Webapp-MPC-Middleware) and HD-wallet \[[BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)] to generate unique keypair for telegram users .  It is now a fully **decentaliurzed** MPC wallet .
+
+For speed requirment of Defi users , now we have swith to [Telegram CloudStorage](https://github.com/Tonspay/Tonspack-font-end-nextjs/tree/cloudstorage) solution .The wallet privateKey being hold safe in telegram cloud session system .&#x20;
 
 Now Tonspack also working on add wallet into **TonconnectUI / Walletconnect /wallet-adapter-react** . To make Tonspack into one of the major wallet .
 
