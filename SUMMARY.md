@@ -13,7 +13,15 @@
 
 ## SDK
 
-* [HD Wallet SDK](sdk/hd-wallet-sdk.md)
+* [HD Wallet SDK](sdk/hd-wallet-sdk/README.md)
+  * [Get start](sdk/hd-wallet-sdk/get-start.md)
+  * [Chain support](sdk/hd-wallet-sdk/chain-support.md)
+  * [NPM](https://www.npmjs.com/package/@tonsprotocol/hdwallet)
+  * [Github](https://github.com/Tonspay/Tonspack-HD-generator)
+* [CloudStorage Wallet SDK](sdk/cloudstorage-wallet-sdk/README.md)
+  * [Get Start](sdk/cloudstorage-wallet-sdk/get-start.md)
+  * [Npm](https://www.npmjs.com/package/@tonsprotocol/telegram-cloudstorage-wallet)
+  * [Github](https://github.com/Tonspay/Telegram-Webapp-CloudStorag-Multichain-Wallet-Solution)
 
 ## Links
 
