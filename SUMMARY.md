@@ -11,6 +11,10 @@
 * [SDK Rules](developer/sdk-rules.md)
 * [Http interface (centralized)](developer/http-interface-centralized.md)
 
+## SDK
+
+* [HD Wallet SDK](sdk/hd-wallet-sdk.md)
+
 ## Links
 
 * [Tonspack-webapp-wallet](https://t.me/tonspack\_bot/app)
